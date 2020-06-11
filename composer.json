@@ -1,0 +1,39 @@
+{
+    "name": "loophp/unaltered-psr-http-message-bridge-bundle",
+    "type": "symfony-bundle",
+    "description": "A drop-in replacement for symfony/psr-http-message-bridge, that does not alter query parameters.",
+    "keywords": [
+        "http",
+        "psr-7",
+        "psr-17",
+        "http-message"
+    ],
+    "homepage": "http://github.com/loophp/unaltered-psr-http-message-bridge-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pol Dellaiera",
+            "email": "pol.dellaiera@protonmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.1.3",
+        "symfony/psr-http-message-bridge": "^1 || ^2"
+    },
+    "require-dev": {
+        "drupol/php-conventions": "^1.7.1",
+        "friends-of-phpspec/phpspec-code-coverage": "^4.3.2",
+        "infection/infection": "^0.13.6 || ^0.15.3 || ^0.16.3",
+        "nyholm/psr7": "^1",
+        "phpspec/phpspec": "^5.1.2 || ^6.1.1",
+        "symfony/http-kernel": "^4 || ^5 || ^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "loophp\\UnalteredPsrHttpMessageBridgeBundle\\": "src/"
+        }
+    },
+    "scripts": {
+        "grumphp": "./vendor/bin/grumphp run"
+    }
+}
