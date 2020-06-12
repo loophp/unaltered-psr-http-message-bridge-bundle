@@ -34,6 +34,7 @@
         }
     },
     "scripts": {
-        "grumphp": "./vendor/bin/grumphp run"
+        "grumphp": "./vendor/bin/grumphp run",
+        "phpspec": "./vendor/bin/phpspec run"
     }
 }
