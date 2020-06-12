@@ -9,7 +9,7 @@ use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
+final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
 {
     /**
      * @var \Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface
