@@ -70,25 +70,32 @@ final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
      */
     private function parseStr(string $queryString): Generator
     {
-        $encodedQueryString = preg_replace_callback(
-            '/(^|(?<=&))[^=[&]+/',
-            static function (array $key): string {
-                return bin2hex(urldecode(current($key)));
-            },
-            $queryString
-        );
-
-        if (null === $encodedQueryString) {
-            return yield from [];
-        }
-
         parse_str(
-            $encodedQueryString,
+            array_reduce(
+                ['urldecode', 'bin2hex'],
+                static function (string $queryString, callable $callback): string {
+                    return (string) preg_replace_callback(
+                        '/(?<key>[^&=]+?)(?:\[[^&=]*\])?=(?<value>[^&=]*)/u',
+                        static function (array $match) use ($callback): string {
+                            /** @phpstan-ignore-next-line */
+                            return (string) preg_replace(
+                                '/[[:^print:]]/',
+                                '',
+                                str_replace($match['key'], $callback($match['key']), $match[0])
+                            );
+                        },
+                        $queryString
+                    );
+                },
+                $queryString
+            ),
             $parameters
         );
 
         foreach ($parameters as $key => $value) {
             yield (string) hex2bin((string) $key) => $value;
         }
+
+        return yield from [];
     }
 }
