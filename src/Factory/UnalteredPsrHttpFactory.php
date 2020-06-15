@@ -30,7 +30,7 @@ final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
         $request = $this->httpMessageFactory->createRequest($symfonyRequest);
 
         // If a query string does not exist, return the original object.
-        if ('' === $unalteredQueryString = $symfonyRequest->server->get('QUERY_STRING')) {
+        if ('' === $unalteredQueryString = $symfonyRequest->server->get('QUERY_STRING', '')) {
             return $request;
         }
 
