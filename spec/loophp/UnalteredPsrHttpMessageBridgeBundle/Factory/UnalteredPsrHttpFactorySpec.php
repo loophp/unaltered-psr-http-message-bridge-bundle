@@ -6,6 +6,7 @@ namespace spec\loophp\UnalteredPsrHttpMessageBridgeBundle\Factory;
 
 use loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory;
 use Nyholm\Psr7\Factory\Psr17Factory;
+use Nyholm\Psr7\ServerRequest;
 use PhpSpec\ObjectBehavior;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -71,6 +72,22 @@ class UnalteredPsrHttpFactorySpec extends ObjectBehavior
         $this
             ->createRequest($symfonyRequest)
             ->shouldReturnAnInstanceOf(RequestInterface::class);
+    }
+
+    public function it_does_not_do_anything_if_the_uri_does_not_have_query_parameters(HttpMessageFactoryInterface $httpMessageFactory)
+    {
+        $symfonyRequest = Request::create('http://localhost/api');
+        $psrRequest = new ServerRequest('GET', 'http://localhost/api');
+
+        $httpMessageFactory
+            ->createRequest($symfonyRequest)
+            ->willReturn($psrRequest);
+
+        $this->beConstructedWith($httpMessageFactory);
+
+        $this
+            ->createRequest($symfonyRequest)
+            ->shouldReturn($psrRequest);
     }
 
     public function it_is_initializable()
