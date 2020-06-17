@@ -9,6 +9,8 @@ use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use const PHP_QUERY_RFC1738;
+
 final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
 {
     /**
@@ -42,7 +44,7 @@ final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
         // Create a new request with the URI and Params updated.
         return $request
             ->withQueryParams(
-                QueryString::extract($unalteredQueryString)
+                QueryString::extract($unalteredQueryString, '&', PHP_QUERY_RFC1738)
             )
             ->withUri(
                 $request
