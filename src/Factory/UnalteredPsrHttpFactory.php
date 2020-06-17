@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace loophp\UnalteredPsrHttpMessageBridgeBundle\Factory;
 
-use League\Uri\Parser\QueryString;
+use League\Uri\QueryString;
 use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
