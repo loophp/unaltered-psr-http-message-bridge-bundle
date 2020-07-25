@@ -15,9 +15,6 @@ class UnalteredPsrHttpMessageBridgeExtension extends Extension
      * {@inheritdoc}
      *
      * @phpstan-ignore-next-line
-     *
-     * @param array $configs
-     * @param ContainerBuilder $container
      */
     public function load(array $configs, ContainerBuilder $container): void
     {

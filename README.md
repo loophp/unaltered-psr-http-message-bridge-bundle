@@ -3,6 +3,7 @@
  [![Total Downloads](https://img.shields.io/packagist/dt/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
  [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/loophp/unaltered-psr-http-message-bridge-bundle/Continuous%20Integration/master?style=flat-square)](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/actions)
  [![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/loophp/unaltered-psr-http-message-bridge-bundle/?branch=master)
+ [![Type Coverage](https://shepherd.dev/github/loophp/unaltered-psr-http-message-bridge-bundle/coverage.svg)](https://shepherd.dev/github/loophp/unaltered-psr-http-message-bridge-bundle)
  [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/loophp/unaltered-psr-http-message-bridge-bundle/?branch=master)
  [![License](https://img.shields.io/packagist/l/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
  [![Donate!](https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square)](https://github.com/sponsors/drupol)

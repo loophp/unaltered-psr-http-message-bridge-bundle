@@ -3,15 +3,12 @@ imports:
 
 parameters:
   extra_tasks:
+    psalm: ~
     phpspec:
       verbose: true
-      metadata:
-        priority: 3000
     infection:
       threads: 1
       test_framework: phpspec
       configuration: infection.json.dist
       min_msi: 50
       min_covered_msi: 50
-      metadata:
-        priority: 2000
