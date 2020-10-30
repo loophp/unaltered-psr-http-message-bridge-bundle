@@ -28,7 +28,7 @@
         "nyholm/psr7": "^1",
         "phpspec/phpspec": "^5.1.2 || ^6.2.1",
         "symfony/http-kernel": "^4 || ^5 || ^5.1",
-        "vimeo/psalm": "^3.12"
+        "vimeo/psalm": "^4.1"
     },
     "autoload": {
         "psr-4": {
