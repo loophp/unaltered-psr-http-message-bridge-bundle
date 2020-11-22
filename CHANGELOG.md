@@ -5,10 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.9](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.8...1.0.9)
+## [1.10.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.9...1.10.0)
 
 ### Commits
 
+- ci: Split ci files. [`623289c`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/623289cafa7fe9d953e79393ae659d903777cadb)
+- ci: Update scrutinizer config. [`e0c8946`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/e0c8946cd9bc3516a73488a3526ce439c14d25b6)
+- ci: Update CI/Grumphp configuration. [`8133da7`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/8133da70823e8d6d446dd07a431872af982a8d98)
+- chore: Update composer.json (dev deps) [`b856509`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/b856509ff1ed5c27ef57bbd401fce6fe6aa62a54)
+
+## [1.0.9](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.8...1.0.9) - 2020-11-11
+
+### Commits
+
+- docs: Add CHANGELOG.md file. [`c04230b`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/c04230b2d3b9d9f5a463dd1ffc8359d0afccb397)
 - chore: Update static files [`57a5e6b`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/57a5e6b26e3e6a7f104211e7a95fbf2fefc5cd8b)
 - Enable Psalm, Infection and Insights reports. [`08131ba`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/08131ba237aaeafde9c21d5309edcc04bc167d16)
 
