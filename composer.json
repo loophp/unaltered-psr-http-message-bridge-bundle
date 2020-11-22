@@ -25,11 +25,11 @@
         "drupol/php-conventions": "^2.0.3",
         "friends-of-phpspec/phpspec-code-coverage": "^5",
         "infection/infection": "^0.20.2",
+        "infection/phpspec-adapter": "^0.1.1",
         "nyholm/psr7": "^1",
         "phpspec/phpspec": "^7",
         "symfony/http-kernel": "^5.1.6",
-        "vimeo/psalm": "^4",
-        "infection/phpspec-adapter": "^0.1.1"
+        "vimeo/psalm": "^4"
     },
     "autoload": {
         "psr-4": {
