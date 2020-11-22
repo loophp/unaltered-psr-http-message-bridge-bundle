@@ -22,13 +22,14 @@
         "symfony/psr-http-message-bridge": "^1 || ^2"
     },
     "require-dev": {
-        "drupol/php-conventions": "^1.7.2 || ^1.8.6 || ^2.0.2",
-        "friends-of-phpspec/phpspec-code-coverage": "^4.3.2",
-        "infection/infection": "^0.13.6 || ^0.15.3",
+        "drupol/php-conventions": "^2.0.3",
+        "friends-of-phpspec/phpspec-code-coverage": "^5",
+        "infection/infection": "^0.20.2",
         "nyholm/psr7": "^1",
-        "phpspec/phpspec": "^5.1.2 || ^6.2.1",
-        "symfony/http-kernel": "^4 || ^5 || ^5.1.5",
-        "vimeo/psalm": "^3.18 || ^4"
+        "phpspec/phpspec": "^7",
+        "symfony/http-kernel": "^5.1.6",
+        "vimeo/psalm": "^4",
+        "infection/phpspec-adapter": "^0.1.1"
     },
     "autoload": {
         "psr-4": {
