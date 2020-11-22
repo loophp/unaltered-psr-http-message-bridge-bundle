@@ -9,6 +9,6 @@ parameters:
     infection:
       threads: 1
       test_framework: phpspec
-      configuration: infection.json.dist
+      configuration: infection.json
       min_msi: 50
       min_covered_msi: 50
