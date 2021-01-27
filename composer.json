@@ -24,7 +24,7 @@
     "require-dev": {
         "drupol/php-conventions": "^3.0.0",
         "friends-of-phpspec/phpspec-code-coverage": "^6",
-        "infection/infection": "^0.20.2",
+        "infection/infection": "^0.21.0",
         "infection/phpspec-adapter": "^0.1.1",
         "nyholm/psr7": "^1",
         "phpspec/phpspec": "^7",
