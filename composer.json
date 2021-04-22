@@ -22,7 +22,7 @@
         "symfony/psr-http-message-bridge": "^1 || ^2"
     },
     "require-dev": {
-        "drupol/php-conventions": "^3.0.0",
+        "drupol/php-conventions": "^4.0.3",
         "friends-of-phpspec/phpspec-code-coverage": "^6",
         "infection/infection": "^0.21.1",
         "infection/phpspec-adapter": "^0.1.1",
