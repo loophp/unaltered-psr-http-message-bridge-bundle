@@ -5,10 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.10.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.9...1.10.0)
+## [1.0.10](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.9...1.0.10)
+
+### Merged
+
+- chore(deps): Bump actions/cache from v2.1.4 to v2.1.5 [`#14`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/14)
+- chore(deps-dev): Update infection/infection requirement from ^0.20.2 to ^0.21.1 [`#12`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/12)
+- chore(deps): Bump actions/cache from v2 to v2.1.4 [`#10`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/10)
+- chore(deps): Bump actions/stale from v3.0.14 to v3.0.16 [`#9`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/9)
+- chore(deps-dev): Update friends-of-phpspec/phpspec-code-coverage requirement from ^5 to ^6 [`#5`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/5)
+- chore(deps-dev): Update drupol/php-conventions requirement from ^2.0.3 to ^3.0.0 [`#6`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/6)
+- chore(deps): Update actions/checkout requirement to v2.3.4 [`#3`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/3)
+- chore(deps): Bump actions/stale from v3.0.13 to v3.0.14 [`#4`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/4)
+- docs: Update changelog. [`#2`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/2)
 
 ### Commits
 
+- refactor: Autofix codebase. [`8869e7a`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/8869e7af7099be4a7c7a9345685c8dcf0dbfc6c4)
+- chore: Update composer.json - upgrade drupol/php-conventions. [`cf12cd7`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/cf12cd70b88b8918ef8a33642b5b733ea44f0d4d)
+- ci: Add Docker stack. [`48e094e`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/48e094e5b7cb62cedc9cc253be92f286ee568f40)
+- chore(deps-dev): Update infection/infection requirement [`fea4e03`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/fea4e034d44175b24b50e4ba15e1a8de250d7795)
+- chore(deps-dev): Update friends-of-phpspec/phpspec-code-coverage requirement [`d9ff996`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/d9ff9968fc7f1169af9e753742f7514f15785e48)
+- chore(deps-dev): Update drupol/php-conventions requirement [`b0b53c9`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/b0b53c9ab52f0e7187f61b056541c11020fb34c8)
+- docs: Update README. [`0678031`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/06780313f26abbcc6928c3f3607fbe1462cac322)
+- chore: Update composer.json (normalize) [`934bfed`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/934bfed0d92effe6618aa2c39b096fd4cb583a2b)
 - ci: Split ci files. [`623289c`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/623289cafa7fe9d953e79393ae659d903777cadb)
 - ci: Update scrutinizer config. [`e0c8946`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/e0c8946cd9bc3516a73488a3526ce439c14d25b6)
 - ci: Update CI/Grumphp configuration. [`8133da7`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/8133da70823e8d6d446dd07a431872af982a8d98)
