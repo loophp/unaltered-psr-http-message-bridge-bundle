@@ -18,19 +18,13 @@ use const PHP_QUERY_RFC1738;
 
 final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
 {
-    /**
-     * @var \Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface
-     */
-    private $httpMessageFactory;
+    private HttpMessageFactoryInterface $httpMessageFactory;
 
     public function __construct(HttpMessageFactoryInterface $httpMessageFactory)
     {
         $this->httpMessageFactory = $httpMessageFactory;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function createRequest(Request $symfonyRequest)
     {
         // Call the original object to avoid duplicating code.
@@ -58,9 +52,6 @@ final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
             );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function createResponse(Response $symfonyResponse)
     {
         return $this->httpMessageFactory->createResponse($symfonyResponse);

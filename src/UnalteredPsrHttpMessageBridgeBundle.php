@@ -11,6 +11,6 @@ namespace loophp\UnalteredPsrHttpMessageBridgeBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class UnalteredPsrHttpMessageBridgeBundle extends Bundle
+final class UnalteredPsrHttpMessageBridgeBundle extends Bundle
 {
 }

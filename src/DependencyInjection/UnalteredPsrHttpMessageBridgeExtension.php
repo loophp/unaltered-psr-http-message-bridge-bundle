@@ -14,11 +14,9 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
-class UnalteredPsrHttpMessageBridgeExtension extends Extension
+final class UnalteredPsrHttpMessageBridgeExtension extends Extension
 {
     /**
-     * {@inheritdoc}
-     *
      * @phpstan-ignore-next-line
      */
     public function load(array $configs, ContainerBuilder $container): void
