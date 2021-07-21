@@ -18,7 +18,11 @@ This package provides a PSR Http Message Factory and the Symfony wiring configur
 The only difference with the package [symfony/psr-http-message-bridge](https://github.com/symfony/psr-http-message-bridge)
 is that it doesn't alter the query parameters when converting a Symfony request into a PSR7 request.
 
-Context
+This package also provide an alias of `Psr\Http\Message\RequestInterface` that will directly provide a PSR7 request,
+very useful to avoid the *mumbo-jumbo* with `symfony/psr-http-message-bridge`.
+
+Context:
+
 * https://3v4l.org/diaBU
 * https://github.com/symfony/symfony/issues/29664
 * https://externals.io/message/106213
@@ -47,27 +51,36 @@ This issue makes the Request object harder to work with when we some logic needs
 composer require loophp/unaltered-psr-http-message-bridge-bundle
 ```
 
-The bundle will automatically do the necessary wiring so that when you request a `HttpMessageFactoryInterface`, it will
-use the one provided by this bundle.
+The bundle will automatically do the necessary wiring so that when you request a `HttpMessageFactoryInterface`,
+it will use the one provided by this bundle.
+
+It will also provide the **PSR request** when requesting an instance of `Psr\Http\Message\RequestInterface`.
 
 # Usage
 
 ```php
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controller;
 
+use Psr\Http\Message\RequestInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface;
 
-class MainController {
+final class MainController {
     /**
      * @Route("/api/offers", name="api_offers")
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function __invoke(Request $request, HttpMessageFactoryInterface $httpMessageFactory) {
+    public function __invoke(
+        Request $request,
+        HttpMessageFactoryInterface $httpMessageFactory,
+        RequestInterface $psrRequest
+    ): Response {
         // Using Symfony's request object.
         $uri = $request->getUri(); // http://localhost:8000/api/offers?product_color=red
         $params = $request->query->all(); // [ 'product_color' => 'red' ]
@@ -75,7 +88,9 @@ class MainController {
         // Using PSR Request.
         $psrRequest = $httpMessageFactory->createRequest($request);
         $uri = (string) $psrRequest->getUri(); // http://localhost:8000/api/offers?product.color=red
-        $params = $psrRequest->getQueryParams(); // [ 'product.color' => 'red' ]
+        $params = $psrRequest->getUri()->getQuery(); // 'product.color=red'
+
+        // Or directly by requesting the PSR request through RequestInterface parameter.
 
         return new Response('');
     }
@@ -92,37 +107,10 @@ by decorating the original service.
 
 There is no bundle configuration and you do not have to do anything besides requiring this package in your application.
 
-# Advanced configuration
-
-Depending on what you want to do, you could also add this piece of configuration in your application.
-
-Despite the fact that a request is not a service, you can use it everywhere.
-
-This configuration will provide `@psr.request` into the container that will contain the Symfony request converted
-in a PSR-7 message.
-
-```yaml
-services:
-    symfony.request:
-        class: Symfony\Component\HttpFoundation\RequestStack
-        factory: [ '@request_stack', getCurrentRequest]
-
-    Psr\Http\Message\RequestInterface:
-        factory: ['@sensio_framework_extra.psr7.http_message_factory', 'createRequest']
-        arguments: ['@symfony.request']
-
-    psr.request:
-        alias: 'Psr\Http\Message\RequestInterface'
-```
-
-Thanks to it, you will also be able to get the PSR-7 request in a controller using auto-wiring.
-
-Notice the factory service `@sensio_framework_extra.psr7.http_message_factory` is used, but it will be replaced with
-`@loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory` internally automatically by Symfony when
-installing this package.
-
 ```php
 <?php
+
+declare(strict_types=1);
 
 namespace App\Controller;
 
@@ -130,20 +118,20 @@ use Psr\Http\Message\RequestInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class MainController {
+final class MainController {
     /**
      * @Route("/api/offers", name="api_offers")
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function __invoke(Request $request, RequestInterface $psrRequest) {
+    public function __invoke(Request $request, RequestInterface $psrRequest): Response {
         // Using Symfony's request object.
         $uri = $request->getUri(); // http://localhost:8000/api/offers?product_color=red
         $params = $request->query->all(); // [ 'product_color' => 'red' ]
 
         // Using PSR Request.
         $uri = (string) $psrRequest->getUri(); // http://localhost:8000/api/offers?product.color=red
-        $params = $psrRequest->getQueryParams(); // [ 'product.color' => 'red' ]
+        $params = $psrRequest->getUri()->getQuery(); // 'product.color=red'
 
         return new Response('');
     }
