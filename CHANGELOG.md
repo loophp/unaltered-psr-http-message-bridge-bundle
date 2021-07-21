@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.0...2.0.0)
+## [2.0.1](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.0...2.0.1)
+
+### Commits
+
+- Register Symfony Bridge ArgumentValueResolver in the container, simplify things. [`ba9875c`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/ba9875ce252a8dfe9c463fdcef2bf53b660e6de1)
+
+## [2.0.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.10...2.0.0) - 2021-07-21
 
 ### Merged
 
@@ -18,22 +24,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- docs: Add/update CHANGELOG. [`e186425`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/e1864254ffe378f9db206979b4148a06574a8084)
 - refactore: Use PHP 7.4 typed properties and update codestyle. [`b56b743`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/b56b743fa800c359f97a53215936c56a76f8455e)
 - chore: Minimum version of PHP is now 7.4. [`8252234`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/8252234aa4355016546d712142b9f1a035fd15cf)
 - chore: Update .gitattributes. [`801f89e`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/801f89e5825a6305a66c1c88857b38f89bc25ab9)
 - refactor: Update services.yaml into services.php, get rid of sensio/framework-extra-bundle. [`b524e1f`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/b524e1fc3afe680c0ad535e33997a8019d39ba6a)
 - docs: Update README. [`3dce41a`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/3dce41aad333be1ee07afd3cdbf83b2992707f0f)
-
-## [2.0.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.10...2.0.0) - 2021-07-21
-
-### Commits
-
-- chore: Update changelog. [`f2fb925`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/f2fb9254726dd4e06f45aa25b3c252abdde6653c)
-- refactore: Use PHP 7.4 typed properties and update codestyle. [`dd7c7ee`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/dd7c7ee5b149c404beef9f57b1120eebd310de6f)
-- chore: Minimum version of PHP is now 7.4. [`041e306`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/041e3069782f87e8a98255a7d19dbcf78a152013)
-- chore: Update .gitattributes. [`75dee7e`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/75dee7e506d85824836bba0cfd68d2f34b79c3dc)
-- refactor: Update services.yaml into services.php, get rid of sensio/framework-extra-bundle. [`dd3ac71`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/dd3ac71094ee9b79ee2ed05d2c45ab74f10012e0)
-- docs: Update README. [`a3d8d9a`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/a3d8d9aeb0df12286f670736c5731508686c5e26)
 
 ## [1.0.10](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.9...1.0.10) - 2021-05-01
 
