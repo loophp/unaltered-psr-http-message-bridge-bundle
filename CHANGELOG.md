@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.1](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.0...2.0.1)
+## [2.0.2](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.1...2.0.2)
 
 ### Commits
 
+- Fix paths to services definition. [`69de408`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/69de40877df9617b13ceef0039e14514bfe6572a)
+- Register a PsrResponseListener to be able to return a PSR ResponseInterface in controllers. [`94e0f61`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/94e0f61f409dedc4b5a44d9f66e13ebf4d09168c)
+
+## [2.0.1](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.0...2.0.1) - 2021-07-21
+
+### Commits
+
+- docs: Add/update CHANGELOG. [`aecfed4`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/aecfed4c65098199adfb6c7d8835743f776293d9)
 - Register Symfony Bridge ArgumentValueResolver in the container, simplify things. [`ba9875c`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/ba9875ce252a8dfe9c463fdcef2bf53b660e6de1)
 
 ## [2.0.0](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/1.0.10...2.0.0) - 2021-07-21
