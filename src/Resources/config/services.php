@@ -11,6 +11,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
 use loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory;
 use Symfony\Bridge\PsrHttpMessage\ArgumentValueResolver\PsrServerRequestResolver;
+use Symfony\Bridge\PsrHttpMessage\EventListener\PsrResponseListener;
 use Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory;
 use Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory;
 use Symfony\Bridge\PsrHttpMessage\HttpFoundationFactoryInterface;
@@ -49,4 +50,13 @@ return static function (ContainerConfigurator $container) {
     $services
         ->set(PsrServerRequestResolver::class)
         ->tag('controller.argument_value_resolver', ['priority' => 50]);
+
+    $services
+        ->set(PsrResponseListener::class)
+        ->tag(
+            'kernel.event_listener',
+            [
+                'event' => 'kernel.view',
+            ]
+        );
 };
