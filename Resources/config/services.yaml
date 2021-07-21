@@ -1,8 +1,0 @@
-services:
-    loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory:
-        class: loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory
-        decorates: 'sensio_framework_extra.psr7.http_message_factory'
-        arguments:
-            $httpMessageFactory: '@loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory.inner'
-
-    Symfony\Bridge\PsrHttpMessage\HttpMessageFactoryInterface: '@sensio_framework_extra.psr7.http_message_factory'
