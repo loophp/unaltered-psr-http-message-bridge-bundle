@@ -18,7 +18,10 @@ use const PHP_QUERY_RFC1738;
 
 final class UnalteredPsrHttpFactory implements HttpMessageFactoryInterface
 {
-    private HttpMessageFactoryInterface $httpMessageFactory;
+    /**
+     * @var HttpMessageFactoryInterface
+     */
+    private $httpMessageFactory;
 
     public function __construct(HttpMessageFactoryInterface $httpMessageFactory)
     {
