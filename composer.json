@@ -19,7 +19,7 @@
     "require": {
         "php": ">= 7.4",
         "league/uri-query-parser": "^1.0",
-        "symfony/psr-http-message-bridge": "^1 || ^2"
+        "loophp/psr-http-message-bridge-bundle": "^1.0"
     },
     "require-dev": {
         "drupol/php-conventions": "^5",

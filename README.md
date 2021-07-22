@@ -1,25 +1,23 @@
-[![Latest Stable Version](https://img.shields.io/packagist/v/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
- [![GitHub stars](https://img.shields.io/github/stars/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
- [![Total Downloads](https://img.shields.io/packagist/dt/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
- [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/loophp/unaltered-psr-http-message-bridge-bundle/Unit%20tests?style=flat-square)](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/actions)
- [![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/loophp/unaltered-psr-http-message-bridge-bundle/?branch=master)
- [![Type Coverage](https://shepherd.dev/github/loophp/unaltered-psr-http-message-bridge-bundle/coverage.svg)](https://shepherd.dev/github/loophp/unaltered-psr-http-message-bridge-bundle)
- [![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/loophp/unaltered-psr-http-message-bridge-bundle/?branch=master)
- [![License](https://img.shields.io/packagist/l/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square)](https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle)
- [![Donate!](https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square)](https://github.com/sponsors/drupol)
+[![Latest Stable Version][latest stable version]][1]
+ [![GitHub stars][github stars]][1]
+ [![Total Downloads][total downloads]][1]
+ [![GitHub Workflow Status][github workflow status]][2]
+ [![Scrutinizer code quality][code quality]][3]
+ [![Type Coverage][type coverage]][4]
+ [![Code Coverage][code coverage]][3]
+ [![License][license]][1]
+ [![Donate!][donate github]][5]
+ [![Donate!][donate paypal]][6]
 
 # Unaltered PSR HTTP Message Bridge Bundle
 
 An opt-in and drop-in replacement bundle for [symfony/psr-http-message-bridge](https://github.com/symfony/psr-http-message-bridge)
 that doesn't alter the query parameters.
 
-This package provides a PSR Http Message Factory and the Symfony wiring configuration.
+This package register a decorator for the service `PsrHttpFactory` in your Symfony application.
 
-The only difference with the package [symfony/psr-http-message-bridge](https://github.com/symfony/psr-http-message-bridge)
-is that it doesn't alter the query parameters when converting a Symfony request into a PSR7 request.
-
-This package also provide an alias of `Psr\Http\Message\RequestInterface` that will directly provide a PSR7 request,
-very useful to avoid the *mumbo-jumbo* with `symfony/psr-http-message-bridge`.
+The only difference with the original class from [symfony/psr-http-message-bridge](https://github.com/symfony/psr-http-message-bridge) is that it doesn't alter the query parameters when converting a Symfony request
+into a PSR7 request.
 
 Context:
 
@@ -50,11 +48,6 @@ This issue makes the Request object harder to work with when we some logic needs
 ```bash
 composer require loophp/unaltered-psr-http-message-bridge-bundle
 ```
-
-The bundle will automatically do the necessary wiring so that when you request a `HttpMessageFactoryInterface`,
-it will use the one provided by this bundle.
-
-It will also provide the **PSR request** when requesting an instance of `Psr\Http\Message\RequestInterface`.
 
 # Usage
 
@@ -102,41 +95,7 @@ Symfony Request object.
 
 # Configuration
 
-This package act as a drop-in replacement for [symfony/psr-http-message-bridge](https://github.com/symfony/psr-http-message-bridge)
-by decorating the original service.
-
-There is no bundle configuration and you do not have to do anything besides requiring this package in your application.
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace App\Controller;
-
-use Psr\Http\Message\RequestInterface;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-final class MainController {
-    /**
-     * @Route("/api/offers", name="api_offers")
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function __invoke(Request $request, RequestInterface $psrRequest): Response {
-        // Using Symfony's request object.
-        $uri = $request->getUri(); // http://localhost:8000/api/offers?product_color=red
-        $params = $request->query->all(); // [ 'product_color' => 'red' ]
-
-        // Using PSR Request.
-        $uri = (string) $psrRequest->getUri(); // http://localhost:8000/api/offers?product.color=red
-        $params = $psrRequest->getUri()->getQuery(); // 'product.color=red'
-
-        return new Response('');
-    }
-}
-```
+There is no configuration and you do not have to do anything besides requiring this package in your application.
 
 ## Code quality, tests and benchmarks
 
@@ -151,4 +110,37 @@ Before each commit some inspections are executed with [GrumPHP](https://github.c
 
 ## Contributing
 
-Feel free to contribute to this library by sending Github pull requests. I'm quite reactive :-)
+Feel free to contribute by sending Github pull requests. I'm quite responsive :-)
+
+## Changelog
+
+See [CHANGELOG.md][15] for a changelog based on [git commits][16].
+
+For more detailed changelogs, please check [the release changelogs][17].
+
+[1]: https://packagist.org/packages/loophp/unaltered-psr-http-message-bridge-bundle
+[2]: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/actions
+[latest stable version]: https://img.shields.io/packagist/v/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square
+[github stars]: https://img.shields.io/github/stars/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square
+[total downloads]: https://img.shields.io/packagist/dt/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square
+[github workflow status]: https://img.shields.io/github/workflow/status/loophp/unaltered-psr-http-message-bridge-bundle/Unit%20tests?style=flat-square
+[code quality]: https://img.shields.io/scrutinizer/quality/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square
+[3]: https://scrutinizer-ci.com/g/loophp/unaltered-psr-http-message-bridge-bundle/?branch=master
+[type coverage]: https://img.shields.io/badge/dynamic/json?style=flat-square&color=color&label=Type%20coverage&query=message&url=https%3A%2F%2Fshepherd.dev%2Fgithub%2Floophp%2Funaltered-psr-http-message-bridge-bundle%2Fcoverage
+[4]: https://shepherd.dev/github/loophp/unaltered-psr-http-message-bridge-bundle
+[code coverage]: https://img.shields.io/scrutinizer/coverage/g/loophp/unaltered-psr-http-message-bridge-bundle/master.svg?style=flat-square
+[license]: https://img.shields.io/packagist/l/loophp/unaltered-psr-http-message-bridge-bundle.svg?style=flat-square
+[donate github]: https://img.shields.io/badge/Sponsor-Github-brightgreen.svg?style=flat-square
+[donate paypal]: https://img.shields.io/badge/Sponsor-Paypal-brightgreen.svg?style=flat-square
+[5]: https://github.com/sponsors/drupol
+[6]: https://www.paypal.me/drupol
+[10]: https://github.com/symfony/psr-http-message-bridge
+[11]: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/actions
+[12]: http://www.phpspec.net/
+[13]: https://github.com/phpro/grumphp
+[14]: https://github.com/infection/infection
+[15]: https://github.com/phpstan/phpstan
+[16]: https://github.com/vimeo/psalm
+[15]: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/blob/master/CHANGELOG.md
+[16]: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commits/master
+[17]: https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/releases
