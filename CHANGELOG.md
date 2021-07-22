@@ -5,10 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.2](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.1...2.0.2)
+## [2.0.3](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.2...2.0.3)
 
 ### Commits
 
+- refactor: PHP 7.3 is the minimum supported PHP version. [`6485e39`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/6485e39f79b39f8ec1b5f2ecafc1b3ff9c212cf2)
+- refactor: Use loophp/psr-http-message-bridge-bundle. [`3d6fe24`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/3d6fe2457cb38c89fbd82272719727c4ec239c1f)
+
+## [2.0.2](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.1...2.0.2) - 2021-07-21
+
+### Commits
+
+- docs: Add/update CHANGELOG. [`abf4b6b`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/abf4b6b259188e38767d6d32d4f97eb70d1a3751)
 - Fix paths to services definition. [`69de408`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/69de40877df9617b13ceef0039e14514bfe6572a)
 - Register a PsrResponseListener to be able to return a PSR ResponseInterface in controllers. [`94e0f61`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/94e0f61f409dedc4b5a44d9f66e13ebf4d09168c)
 
