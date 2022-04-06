@@ -5,10 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.3](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.2...2.0.3)
+## [2.0.4](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.3...2.0.4)
+
+### Merged
+
+- Update query parser library for PHP8 compat [`#36`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/36)
+- chore(deps): Bump shivammathur/setup-php from 2.17.1 to 2.18.0 [`#35`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/35)
+- chore(deps): Bump actions/cache from 2.1.7 to 3 [`#34`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/34)
+- chore(deps): Bump actions/checkout from 2.4.0 to 3 [`#32`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/32)
+- chore(deps): Bump shivammathur/setup-php from 2.17.0 to 2.17.1 [`#33`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/33)
+- chore(deps): Bump shivammathur/setup-php from 2.16.0 to 2.17.0 [`#31`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/31)
+- chore(deps): Bump shivammathur/setup-php from 2.15.0 to 2.16.0 [`#30`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/30)
+- chore(deps): Bump actions/cache from 2.1.6 to 2.1.7 [`#29`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/29)
+- chore(deps): Bump actions/checkout from 2.3.5 to 2.4.0 [`#28`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/28)
+- chore(deps): Bump actions/checkout from 2.3.4 to 2.3.5 [`#27`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/27)
+- chore(deps): Bump shivammathur/setup-php from 2.14.0 to 2.15.0 [`#26`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/26)
+- chore(deps): Bump shivammathur/setup-php from 2.13.0 to 2.14.0 [`#25`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/25)
+- chore(deps): Bump shivammathur/setup-php from 2.12.0 to 2.13.0 [`#24`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/24)
+- chore(deps-dev): Update infection/infection requirement from ^0.23 to ^0.24 [`#23`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/23)
 
 ### Commits
 
+- chore: Update `composer.json`. [`724bf35`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/724bf3557ade2107742ec4d5d6f8baa8fc42cb9c)
+- chore: Update License dates [`d426083`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/d426083a171425e9413d71d006f3ae84f3405913)
+- chore(deps-dev): Update infection/infection requirement [`d6aee17`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/d6aee171354e7da943b575fa20db43732a5045a5)
+
+## [2.0.3](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.2...2.0.3) - 2021-07-22
+
+### Commits
+
+- docs: Add/update CHANGELOG. [`5373850`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/53738509a8100c32c20c2af4717def06af609df7)
 - refactor: PHP 7.3 is the minimum supported PHP version. [`6485e39`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/6485e39f79b39f8ec1b5f2ecafc1b3ff9c212cf2)
 - refactor: Use loophp/psr-http-message-bridge-bundle. [`3d6fe24`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/3d6fe2457cb38c89fbd82272719727c4ec239c1f)
 
