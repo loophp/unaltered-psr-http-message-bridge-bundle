@@ -1,0 +1,5 @@
+services:
+    loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory:
+        decorates: Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory
+        arguments:
+            $httpMessageFactory: '@loophp\UnalteredPsrHttpMessageBridgeBundle\Factory\UnalteredPsrHttpFactory.inner'
