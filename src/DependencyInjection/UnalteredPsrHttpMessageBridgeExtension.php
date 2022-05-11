@@ -12,7 +12,7 @@ namespace loophp\UnalteredPsrHttpMessageBridgeBundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 final class UnalteredPsrHttpMessageBridgeExtension extends Extension
 {
@@ -21,11 +21,11 @@ final class UnalteredPsrHttpMessageBridgeExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
-        $loader = new PhpFileLoader(
+        $loader = new YamlFileLoader(
             $container,
-            new FileLocator(__DIR__ . '/../Resources/config')
+            new FileLocator(__DIR__ . '/../../config')
         );
 
-        $loader->load('services.php');
+        $loader->load('services.yaml');
     }
 }
