@@ -5,7 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.4](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.3...2.0.4)
+## [2.0.5](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.4...2.0.5)
+
+### Merged
+
+- Convert PHP config in YAML so it works in Symfony 4 and 5. [`#39`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/39)
+- chore(deps): Bump shivammathur/setup-php from 2.18.0 to 2.18.1 [`#38`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/38)
+- chore(deps): Bump actions/stale from 4 to 5 [`#37`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/pull/37)
+
+## [2.0.4](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/compare/2.0.3...2.0.4) - 2022-04-06
 
 ### Merged
 
@@ -26,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Commits
 
+- docs: Update changelog. [`aefa19b`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/aefa19b9c1b4dc2f4f87a7945616c817aac56d01)
 - chore: Update `composer.json`. [`724bf35`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/724bf3557ade2107742ec4d5d6f8baa8fc42cb9c)
 - chore: Update License dates [`d426083`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/d426083a171425e9413d71d006f3ae84f3405913)
 - chore(deps-dev): Update infection/infection requirement [`d6aee17`](https://github.com/loophp/unaltered-psr-http-message-bridge-bundle/commit/d6aee171354e7da943b575fa20db43732a5045a5)
