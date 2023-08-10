@@ -18,7 +18,7 @@
     "homepage": "http://github.com/loophp/unaltered-psr-http-message-bridge-bundle",
     "require": {
         "php": ">= 7.3",
-        "league/uri-components": "^2.4",
+        "league/uri-components": "^7.0",
         "loophp/psr-http-message-bridge-bundle": "^1.0"
     },
     "require-dev": {
