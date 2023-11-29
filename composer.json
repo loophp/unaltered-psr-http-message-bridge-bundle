@@ -28,7 +28,7 @@
         "infection/phpspec-adapter": "^0.2.0",
         "nyholm/psr7": "^1",
         "phpspec/phpspec": "^7.1",
-        "symfony/http-kernel": "^6.0.0"
+        "symfony/http-kernel": "^7.0.0"
     },
     "autoload": {
         "psr-4": {
