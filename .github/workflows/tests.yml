@@ -22,7 +22,7 @@ jobs:
                   git config --global core.eol lf
 
             - name: Checkout
-              uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
+              uses: actions/checkout@2d7d9f7ff5b310f983d059b68785b3c74d8b8edd # v4
               with:
                   fetch-depth: 1
 
