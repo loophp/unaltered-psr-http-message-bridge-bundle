@@ -22,7 +22,7 @@
         "loophp/psr-http-message-bridge-bundle": "^1.0"
     },
     "require-dev": {
-        "drupol/php-conventions": "^5",
+        "drupol/php-conventions": "^6",
         "friends-of-phpspec/phpspec-code-coverage": "^6",
         "infection/infection": "^0.29",
         "infection/phpspec-adapter": "^0.2.0",
