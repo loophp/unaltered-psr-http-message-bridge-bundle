@@ -1,4 +1,4 @@
-FROM node:15.14.0-alpine
+FROM node:24.11.1-alpine
 
 ENV SRC_PATH /src
 
