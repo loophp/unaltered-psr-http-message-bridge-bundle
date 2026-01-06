@@ -25,7 +25,7 @@
         "drupol/php-conventions": "^6",
         "friends-of-phpspec/phpspec-code-coverage": "^6",
         "infection/infection": "^0.29",
-        "infection/phpspec-adapter": "^0.2.0",
+        "infection/phpspec-adapter": "^0.3.0",
         "nyholm/psr7": "^1",
         "phpspec/phpspec": "^7.1",
         "symfony/http-kernel": "^6.0.0"
